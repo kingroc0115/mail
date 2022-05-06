@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.2rc2 on win32)" generated="20210311 10:54:37.716">
+<suite id="s1" name="DeaAndActiveCell" source="D:\gitlib\性能提升\MutiplyUserTest\DeaAndActiveCell.robot">
+<test id="s1-t1" name="反复去激活激活小区">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>start</arg>
+</arguments>
+<status status="PASS" starttime="20210311 10:54:43.546" endtime="20210311 10:54:43.546"></status>
+</kw>
+<kw name="LoginOMC" library="NROMC">
+<tags>
+<tag>OMC</tag>
+</tags>
+<kw name="Login" library="NRControlFun">
+<status status="PASS" starttime="20210311 10:54:43.546" endtime="20210311 10:54:59.458"></status>
+</kw>
+<status status="PASS" starttime="20210311 10:54:43.546" endtime="20210311 10:54:59.458"></status>
+</kw>
+<kw name="OmcLstCell" library="NROMC">
+<tags>
+<tag>OMC</tag>
+</tags>
+<arguments>
+<arg>${GNBID}</arg>
+<arg>${cellid}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Lst Cell" library="NRControlFun">
+<arguments>
+<arg>${GNBID}</arg>
+<arg>${CellID}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20210311 10:55:20.033" level="INFO">cell active</msg>
+<msg timestamp="20210311 10:55:20.033" level="INFO">${status} = 2</msg>
+<status status="PASS" starttime="20210311 10:54:59.458" endtime="20210311 10:55:20.033"></status>
+</kw>
+<msg timestamp="20210311 10:55:20.033" level="INFO">${status} = 2</msg>
+<status status="PASS" starttime="20210311 10:54:59.458" endtime="20210311 10:55:20.033"></status>
+</kw>
+<kw name="${i} IN RANGE [ 10 ]" type="for">
+<msg timestamp="20210311 10:55:20.033" level="FAIL">FOR loop contains no keywords.</msg>
+<status status="FAIL" starttime="20210311 10:55:20.033" endtime="20210311 10:55:20.033"></status>
+</kw>
+<status status="FAIL" starttime="20210311 10:54:43.546" endtime="20210311 10:55:20.033" critical="yes">FOR loop contains no keywords.</status>
+</test>
+<status status="FAIL" starttime="20210311 10:54:37.716" endtime="20210311 10:55:20.033"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="DeaAndActiveCell">DeaAndActiveCell</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
